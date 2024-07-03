@@ -4,12 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>anastasiya volgina</title>
+        <link rel="icon" href="assets/icon.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!--HEADER-->
         <div id="header">
             <div class="container">
                 <nav>
@@ -19,25 +21,57 @@
                         <li><a href="#">About</a></li>
                         <li><a href="#">Skills</a></li>
                         <li><a href="#">Projects</a></li>
-                        <li><a href="#">Resume</a></li>
+                        <li><a href="https://drive.google.com/file/d/1woa-FqNFn2ra2JgjeZY_igrxEwPybsK1/view?usp=sharing" 
+                            target="_blank">Resume</a></li>
                     </ul>
                 </nav>
                 <div class="header-title">
                     <h1>Hi, I'm <span>Anastasiya Volgina</span></h1>
                 </div>
                 <div class="header-description">
-                    <p>University of Waterloo <a href="https://www.youtube.com" target="_blank">CE 1A↪</a></p>
+                    <p>University of Waterloo <a href="https://uwaterloo.ca/future-students/programs/computer-engineering" target="_blank">CE 1A↪</a></p>
                 </div>  
-                <a href="https://www.youtube.com" target="_blank" class="social-icon github"></a>
-                <a href="https://www.linkedin.com/in/anastasiya-volgina" target="_blank" class="social-icon linkedin"></a>
-                <a href="https://www.youtube.com" target="_blank" class="social-icon email"></a>
+                <a href="https://github.com/Anastasiya006" target="_blank" class="social-icon github"></a>
+                <a href="https://linkedin.com/in/anastasiya-volgina" target="_blank" class="social-icon linkedin"></a>
+                <a href="mailto:a.volgina4@gmail.com" target="_blank" class="social-icon email"></a>
             </div>
         </div>
 
+        <!--ABOUT ME-->
         <div id="about">
             <div class="container">
-
+                <div class="grid">
+                    <div class="left">
+                        <img src="assets/self.webp" class="self">
+                    </div>
+                    <div class="right">
+                        <div class="about-title"><h2>About Me</h2></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam felis eu tortor hendrerit, nec suscipit odio aliquet.</p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!--SKILLS-->
+        <div id="skills">
+            <div class="container">
+                <div class="skills-title"><h2>Skills</h2></div>
+                <div class="scroller" id="scroller">
+                    <div class="scroller__inner">
+                        <img src="assets/tools/java.png" class="tools">
+                        <img src="assets/tools/python.png" class="tools">
+                        <img src="assets/tools/pygame.png" class="tools">
+                        <img src="assets/tools/arduino.png" class="tools">
+                        <img src="assets/tools/c++.png" class="tools">
+                        <img src="assets/tools/html.png" class="tools">
+                        <img src="assets/tools/css.png" class="tools">
+                        <img src="assets/tools/javascript.png" class="tools">
+                        <img src="assets/tools/kicad.png" class="tools">
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
     </body>
 </html>

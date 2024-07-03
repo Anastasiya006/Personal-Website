@@ -1,96 +1,179 @@
+/* adjust for mobile, add later */
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-    background: #FFFFFF;
-    color: #000000;
+  background: #ffffff;
+  color: #000000;
 }
 
 /* HEADER */
 #header {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 60vh;
 }
-.container{
-    padding: 10px 10%;
+.container {
+  padding: 10px 10%;
 }
 .header-title h1 {
-    margin-top: 6%;
-    margin-bottom: 2%;
-    font-weight: 600;
-    font-size: 50px;
+  margin-top: 6%;
+  margin-bottom: 2%;
+  font-weight: 600;
+  font-size: 50px;
 }
 .header-title h1 span {
-    color: #C2A0E8;
+  color: #c2a0e8;
 }
 .header-description {
-    margin-bottom: 3%;
-    font-size: 25px;
+  margin-bottom: 3%;
+  font-size: 25px;
 }
 .header-description a {
-    color: #C2A0E8;
+  color: #c2a0e8;
 }
 .social-icon {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 15px; 
-    margin-right: 12px; 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-image 0.3s ease;;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-image 0.3s ease;
 }
 .social-icon:hover {
-    transform: scale(1.1); 
+  transform: scale(1.1);
 }
 .github {
-    background-image: url('assets/github.png');
+  background-image: url("assets/buttons/github.png");
 }
 .github:hover {
-    background-image: url('assets/github-hover.png');
+  background-image: url("assets/buttons/github-hover.png");
 }
 .linkedin {
-    background-image: url('assets/linkedin.png');
+  background-image: url("assets/buttons/linkedin.png");
 }
 .linkedin:hover {
-    background-image: url('assets/linkedin-hover.png');
+  background-image: url("assets/buttons/linkedin-hover.png");
 }
 .email {
-    background-image: url('assets/email.png');
+  background-image: url("assets/buttons/email.png");
 }
 .email:hover {
-    background-image: url('assets/email-hover.png');
+  background-image: url("assets/buttons/email-hover.png");
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .logo {
-    width: 100px;
+  width: 90px;
 }
 
 nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
 }
 
 nav ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #C2A0E8;
+  color: #93bea4;
+}
+
+/* ABOUT ME */
+#about {
+  width: 100%;
+  height: 50vh;
+}
+.container {
+  padding: 10px 10%;
+}
+.grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.right {
+  margin-left: 40px;
+  padding: 10px;
+}
+.about-title {
+  margin-bottom: 10px;
+}
+.self {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* SKILLS */
+#skills {
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  padding: 10px 10%;
+}
+.skills-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.tools {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+}
+.tools:hover{
+  transform: scale(1.1);
+  border: 2px solid #c2a0e8;
+  border-radius: 12px;
+}
+.scroller {
+  max-width: 1000apx;
+  margin: 0 auto;
+}
+.scroller__inner {
+  padding-block: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent, white 20% 80%, transparent);
+}
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll 15s var(--_animation-direction, reverse) linear infinite;
+}
+.scroller[data-animated="true"] .scroller__inner:hover {
+  animation-play-state: paused;
+}
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 5px));
+  }
 }
