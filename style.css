@@ -16,12 +16,15 @@ body {
 #header {
   width: 100%;
   height: 60vh;
-}
-.container {
   padding: 10px 10%;
+  margin-bottom: 10px;
+  background-image: url("assets/cover.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .header-title h1 {
-  margin-top: 6%;
+  margin-top: 5%;
   margin-bottom: 2%;
   font-weight: 600;
   font-size: 50px;
@@ -30,13 +33,13 @@ body {
   color: #c2a0e8;
 }
 .header-description {
-  margin-bottom: 3%;
+  margin-bottom: 4%;
   font-size: 25px;
 }
 .header-description a {
   color: #c2a0e8;
 }
-.social-icon {
+.button {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -48,7 +51,7 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease, background-image 0.3s ease;
 }
-.social-icon:hover {
+.button:hover {
   transform: scale(1.1);
 }
 .github {
@@ -69,6 +72,16 @@ body {
 .email:hover {
   background-image: url("assets/buttons/email-hover.png");
 }
+.resume {
+  margin-left: 8px;
+  width: 125px;
+  background-image: url("assets/buttons/resume.png");
+}
+.resume:hover {
+  margin-left: 8px;
+  width: 125px;
+  background-image: url("assets/buttons/resume-hover.png");
+}
 
 nav {
   display: flex;
@@ -83,7 +96,7 @@ nav {
 nav ul li {
   display: inline-block;
   list-style: none;
-  margin: 10px 20px;
+  margin: 10px 12px;
 }
 
 nav ul li a {
@@ -99,19 +112,16 @@ nav ul li a:hover {
 /* ABOUT ME */
 #about {
   width: 100%;
-  height: 50vh;
-}
-.container {
-  padding: 10px 10%;
+  height: 53vh;
+  padding: 20px;
+  padding-left: 145px;
+  padding-right: 145px;
+  display: flex;
 }
 .grid {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-}
-.right {
-  margin-left: 40px;
-  padding: 10px;
+  gap: 50px;
 }
 .about-title {
   margin-bottom: 10px;
@@ -121,13 +131,39 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
+/* mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; 
+  }
+
+  .grid {
+    flex-direction: column; /* stack items vertically */
+    gap: 10px; 
+  }
+
+  .right {
+    margin-left: 0; 
+    padding: 0; 
+  }
+
+  .self {
+    width: 100%;
+    max-width: 300px; 
+    margin-bottom: 10px; 
+  }
+}
+
 /* SKILLS */
 #skills {
   width: 100%;
-  height: 100vh;
-}
-.container {
-  padding: 10px 10%;
+  height: 35vh;
+  padding-top: 80px;
+  margin-bottom: 15px;
+  background-image: url("assets/divider.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 .skills-title {
   margin-bottom: 20px;
@@ -138,13 +174,13 @@ nav ul li a:hover {
   height: 120px;
   margin-right: 10px;
 }
-.tools:hover{
+.tools:hover {
   transform: scale(1.1);
   border: 2px solid #c2a0e8;
   border-radius: 12px;
 }
 .scroller {
-  max-width: 1000apx;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .scroller__inner {
@@ -176,4 +212,54 @@ nav ul li a:hover {
   to {
     transform: translate(calc(-50% - 5px));
   }
+}
+
+/* CONTACT */
+#contact {
+  width: 100%;
+  height: 80vh;
+  padding-top: 80px;
+  padding-left: 145px;
+  display: flex;
+  background-image: url("assets/footer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+.contact-description {
+  padding-bottom: 20px;  
+}
+.contact-inputs {
+  width: 500px;
+  height: 50px;
+  background-color: #DED7FA;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  border-radius: 50px;
+  padding-left: 25px;
+}
+.contact-inputs:focus {
+  border: 2px solid #c2a0e8;
+}
+.contact-left textarea {
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+  resize: none;
+  overflow: auto;
+}
+.contact-left button {
+  margin-left: auto; /* pushes the button to the right */
+  display: flex;
+  border: none;
+}
+.contact-left button img {
+  height: 30px;
 }
